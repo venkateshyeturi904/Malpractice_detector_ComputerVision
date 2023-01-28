@@ -23,7 +23,7 @@ class Window(QWidget):
         pixmap2 = pixmap21.scaled(579,460)
         label2.setPixmap(pixmap2)
         self.resize(pixmap2.width(),pixmap2.height())
-        label2.setGeometry(300,280,pixmap2.width(),pixmap2.height())
+        label2.setGeometry(300,290,pixmap2.width(),pixmap2.height())
         self.create_widgets()
         
 
@@ -68,7 +68,25 @@ class Window(QWidget):
         self.label3.move(1000,407)
         self.label3.setFont(QFont("Times New Roman",17))
         self.label3.setStyleSheet("color:white")
+
         
+        label7 = LinkLabel(self)
+        linkTemplate = '<a href={0}>{1}</a>'
+        label7.setText(linkTemplate.format('https://Google.com','New User'))
+        label7.setGeometry(1470,550,180,48)  
+        label7.setStyleSheet("color:white")
+
+        label8 = LinkLabel(self)
+        label8.setText(linkTemplate.format('https://Google.com','Help'))
+        label8.setGeometry(1500,600,180,48)  
+        label8.setStyleSheet("color:white")
+
+
+class LinkLabel(QLabel):
+    def __init__(self,parent=None):
+        super().__init__()
+        self.setOpenExternalLinks(True)
+        self.setParent(parent)       
 
 window = Window()
 # window.setGeometry(0,0,2000,1000)
