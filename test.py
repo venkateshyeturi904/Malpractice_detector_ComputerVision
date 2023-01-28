@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
+from PyQt5 import QtCore
 import sys 
 app = QApplication(sys.argv) 
 
@@ -7,15 +8,14 @@ class Window(QWidget):
     def __init__(self):
         super().__init__()
         
-        label = QLabel(self)
+        #self.setFixedWidth(1200)
+        #self.setFixedHeight(1200)
+        size = self.size()
         pixmap = QPixmap('background_image.jpeg')
-        label.setPixmap(pixmap)
-        self.resize(pixmap.width(),pixmap.height())
-
-        label2 = QLabel(self)
-        pixmap2 = QPixmap()
-        label2.setPixmap()
-        self.resize(pixmap2.width(),pixmap.height())
+        pixmap4 = pixmap.scaled(size.width(), size.height())
+        label = QLabel(self)
+        label.resize(size.width(), size.height())
+        label.setPixmap(pixmap4)
 
 window = Window()
 
