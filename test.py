@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from PyQt5 import QtCore
+from PyQt5 import *
 import sys 
 app = QApplication(sys.argv) 
 
@@ -75,20 +75,24 @@ class Window(QWidget):
         label7 = LinkLabel(self)
         linkTemplate = '<a href={0}>{1}</a>'
         label7.setText(linkTemplate.format('https://Google.com','New User'))
-        label7.setGeometry(1470,550,180,48)  
+        label7.setFont(QFont("",17))
+        label7.setGeometry(1440,550,180,48)  
         label7.setStyleSheet("color:white")
 
         label8 = LinkLabel(self)
         label8.setText(linkTemplate.format('https://Google.com','Help'))
-        label8.setGeometry(1500,600,180,48)  
-        label8.setStyleSheet("color:white")
+        label8.setFont(QFont("",17))
+        label8.setGeometry(1485,600,180,48)  
+        #label8.setStyleSheet("color:white")
 
 
 class LinkLabel(QLabel):
     def __init__(self,parent=None):
         super().__init__()
         self.setOpenExternalLinks(True)
-        self.setParent(parent)       
+        self.setParent(parent)     
+        color_effect = QGraphicsColorizeEffect()
+        color_effect.setColor(white)
 
 window = Window()
 # window.setGeometry(0,0,2000,1000)
