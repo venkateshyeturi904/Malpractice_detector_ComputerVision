@@ -52,8 +52,10 @@ class Window(QWidget):
         self.label5.setFont(QFont("",16))
         
         self.textbox1 = QLineEdit(self)
-        self.textbox1.setTextMargins(1,1,1,30)
+        #self.textbox1.setTextMargins(1,1,1,30)
+        self.textbox1.setFont(QFont("",13))
         self.textbox2 = QLineEdit(self)
+        self.textbox2.setFont(QFont("",13))
         self.textbox1.move(1000,350)
         self.textbox2.move(1000,450)
         self.textbox1.resize(530,45)
