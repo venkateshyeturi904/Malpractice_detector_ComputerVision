@@ -7,6 +7,7 @@ screen = app.primaryScreen()
 screen=screen.size()
 w=screen.width()
 h=screen.height()
+
 class Window(QWidget):
     def __init__(self):
         super().__init__()
