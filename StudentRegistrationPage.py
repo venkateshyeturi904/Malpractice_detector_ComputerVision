@@ -4,6 +4,7 @@ from PyQt5 import *
 from PyQt5.QtCore import Qt
 from email_sender import send_email
 import sys 
+import pandas as pd
 app = QApplication(sys.argv) 
 screen = app.primaryScreen()
 screen=screen.size()
@@ -120,7 +121,9 @@ class LinkLabel(QLabel):
         color_effect = QGraphicsColorizeEffect()
         #color_effect.setColor(white)
 
-window = Window2()
+# window = Window2()
 # window.setGeometry(0,0,2000,1000)
-window.show()
-sys.exit(app.exec())
+# window.show()
+# df = pd.read_csv('sampleDB.csv')
+# print(df['Password'][1])
+# sys.exit(app.exec())

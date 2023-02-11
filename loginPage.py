@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import *
 from PyQt5.QtCore import Qt
+import StudentRegistrationPage
 import sys 
 app = QApplication(sys.argv) 
 screen = app.primaryScreen()
@@ -79,16 +80,27 @@ class Window(QWidget):
         
         label7 = LinkLabel(self)
         linkTemplate = '<a href={0}>{1}</a>'
-        label7.setText(linkTemplate.format('https://Google.com','New User'))
-        label7.setFont(QFont("",int(w*h*0.0000081983)))
-        label7.setGeometry(int(w*0.75),int(h*0.50925),int(w*0.09375),int(h*0.0444))  
-        label7.setStyleSheet("color:white")
+
+        btn3 = QPushButton("Proceed",self)
+        btn3.setGeometry(int(w*0.75),int(h*0.50925),int(w*0.11979),int(h*0.0416))
+        btn3.clicked.connect(self.callRPage)
+
+        # label7.setText(linkTemplate.format('https://Google.com','New User'))
+        # label7.setFont(QFont("",int(w*h*0.0000081983)))
+        # label7.setGeometry(int(w*0.75),int(h*0.50925),int(w*0.09375),int(h*0.0444))  
+        # label7.setStyleSheet("color:white")
 
         label8 = LinkLabel(self)
         label8.setText(linkTemplate.format('https://Google.com','Help'))
         label8.setFont(QFont("",int(w*h*0.0000081983)))
         label8.setGeometry(int(w*0.7734375),int(h*0.555555),int(w*0.09375),int(h*0.0444))  
         #label8.setStyleSheet("color:white")
+
+    def callRPage(self):
+        RPage = StudentRegistrationPage.Window2()
+        # win = RPage.window2()
+        RPage.show()
+        window.close()
 
 
 
