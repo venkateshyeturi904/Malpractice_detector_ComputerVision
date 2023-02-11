@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import *
+from email_sender import send_email
 import sys 
 app = QApplication(sys.argv) 
 screen = app.primaryScreen()
@@ -9,7 +10,7 @@ w=screen.width()
 h=screen.height()
 print(w,h)
 
-class Window(QWidget):
+class Window2(QWidget):
     def __init__(self):
         super().__init__()
         
@@ -71,9 +72,11 @@ class Window(QWidget):
         self.textbox1.resize(int(w*0.2760),int(h*0.04166))
         self.textbox1.setFont(QFont("",int(w*h*0.0000062692)))
 
-        btn1 = QPushButton("Proceed",self)
-        btn1.setGeometry(int(w*0.83),int(h*0.3240),int(w*0.08979),int(h*0.0416))
-
+        self.btn1 = QPushButton("Proceed",self)
+        self.btn1.setGeometry(int(w*0.83),int(h*0.3240),int(w*0.08979),int(h*0.0416))
+        self.btn1.clicked.connect(lambda : send_email(recipient= "<" + self.textbox1.text() + ">", email= "Hello" ))
+        
+        #recipient=self.textbox1.text()
         # self.label3 = QLabel("Password",self)
         # self.label3.move(int(w*0.5208),int(h*0.3768))
         # self.label3.setFont(QFont("Times New Roman",int(w*h*0.00000819830)))
@@ -102,7 +105,7 @@ class LinkLabel(QLabel):
         color_effect = QGraphicsColorizeEffect()
         #color_effect.setColor(white)
 
-window = Window()
+window = Window2()
 # window.setGeometry(0,0,2000,1000)
 window.show()
 sys.exit(app.exec())

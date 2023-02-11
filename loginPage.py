@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import *
+import StudentRegistrationPage
 import sys 
 app = QApplication(sys.argv) 
 screen = app.primaryScreen()
@@ -88,6 +89,7 @@ class Window(QWidget):
         label8.setFont(QFont("",int(w*h*0.0000081983)))
         label8.setGeometry(int(w*0.7734375),int(h*0.555555),int(w*0.09375),int(h*0.0444))  
         #label8.setStyleSheet("color:white")
+
 
 
 class LinkLabel(QLabel):
