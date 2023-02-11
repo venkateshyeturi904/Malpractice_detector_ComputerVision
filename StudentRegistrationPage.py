@@ -37,7 +37,8 @@ class Window2(QWidget):
         
 
         self.label = QLabel("Candidate Registraion Page",self)
-        self.label.move(int(w*0.2796),int(h*0.055))
+        self.label.move(int(w*0.3796),int(h*0.055))
+        self.label.setAlignment(Qt.AlignCenter)
         self.label.setFont(QFont("Pacifico",int(w*h*0.000010)))
         self.label.setStyleSheet("color : white")
         
@@ -62,13 +63,12 @@ class Window2(QWidget):
         # self.textbox2.resize(int(w*0.2760),int(h*0.04166))
 
         self.label2 = QLabel("Enter your Email Id (Eg : abc@iitg.ac.in)",self)
-        self.label2.move(int(w*0.5208),int(h*0.2842))
+        self.label2.move(int(w*0.5208),int(h*0.2685))
         self.label2.setFont(QFont("Times New Roman",int(w*h*0.00000819830)))
         self.label2.setStyleSheet("color:white")
 
         self.textbox1 = QLineEdit(self)
-        # self.textbox1.setTextMargins(1,1,1,30)
-        self.textbox1.move(int(w*0.5208),int(h*0.3240))
+        self.textbox1.move(int(w*0.5208),int(h*0.30))
         self.textbox1.resize(int(w*0.2760),int(h*0.04166))
         self.textbox1.setFont(QFont("",int(w*h*0.0000062692)))
 
@@ -82,19 +82,33 @@ class Window2(QWidget):
         # self.label3.setFont(QFont("Times New Roman",int(w*h*0.00000819830)))
         # self.label3.setStyleSheet("color:white")
 
-        
-        # label7 = LinkLabel(self)
-        # linkTemplate = '<a href={0}>{1}</a>'
-        # label7.setText(linkTemplate.format('https://Google.com','New User'))
-        # label7.setFont(QFont("",int(w*h*0.0000081983)))
-        # label7.setGeometry(int(w*0.75),int(h*0.50925),int(w*0.09375),int(h*0.0444))  
-        # label7.setStyleSheet("color:white")
+        self.textbox1 = QLineEdit(self)
+        self.textbox1.move(int(w*0.5208),int(h*0.423240))
+        self.textbox1.resize(int(w*0.2760),int(h*0.035166))
+        self.textbox1.setFont(QFont("",int(w*h*0.0000062692)))
 
-        # label8 = LinkLabel(self)
-        # label8.setText(linkTemplate.format('https://Google.com','Help'))
-        # label8.setFont(QFont("",int(w*h*0.0000081983)))
-        # label8.setGeometry(int(w*0.7734375),int(h*0.555555),int(w*0.09375),int(h*0.0444))  
-        #label8.setStyleSheet("color:white")
+        self.label2 = QLabel("New Password",self)
+        self.label2.move(int(w*0.5208),int(h*0.468842))
+        self.label2.setFont(QFont("Times New Roman",int(w*h*0.00000819830)))
+        self.label2.setStyleSheet("color:white")
+
+        self.textbox1 = QLineEdit(self)
+        self.textbox1.move(int(w*0.5208),int(h*0.503240))
+        self.textbox1.resize(int(w*0.2760),int(h*0.035166))
+        self.textbox1.setFont(QFont("",int(w*h*0.0000062692)))
+
+        self.label2 = QLabel("Confirm New Password",self)
+        self.label2.move(int(w*0.5208),int(h*0.548842))
+        self.label2.setFont(QFont("Times New Roman",int(w*h*0.00000819830)))
+        self.label2.setStyleSheet("color:white")
+
+        self.textbox1 = QLineEdit(self)
+        self.textbox1.move(int(w*0.5208),int(h*0.583240))
+        self.textbox1.resize(int(w*0.2760),int(h*0.035166))
+        self.textbox1.setFont(QFont("",int(w*h*0.0000062692)))
+
+        btn1 = QPushButton("Proceed to Face registration",self)
+        btn1.setGeometry(int(w*0.583),int(h*0.64),int(w*0.14979),int(h*0.0416))
 
 
 class LinkLabel(QLabel):
