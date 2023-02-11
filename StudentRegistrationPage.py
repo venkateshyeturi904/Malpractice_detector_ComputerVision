@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import *
+from PyQt5.QtCore import Qt
 from email_sender import send_email
 import sys 
 app = QApplication(sys.argv) 
