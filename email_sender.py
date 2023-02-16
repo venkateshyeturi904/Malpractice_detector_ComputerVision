@@ -2,7 +2,6 @@ import smtplib, ssl
 
 
 def send_email(recipient, email):    
-    recipient = "<" + recipient + ">"
     port = 465  
     smtp_server = "smtp.gmail.com"
     sender = "assyyy47@gmail.com"
