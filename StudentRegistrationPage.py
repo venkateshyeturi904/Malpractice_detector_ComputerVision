@@ -5,6 +5,8 @@ from PyQt5.QtCore import Qt
 from email_sender import send_email
 import sys 
 import pandas as pd
+import ctypes   
+
 app = QApplication(sys.argv) 
 screen = app.primaryScreen()
 screen=screen.size()
@@ -42,21 +44,38 @@ class Window2(QWidget):
                 password = x[6]
                 break    
           send_email(recipient= email_id, email= password )
-          self.textbox1.setText("")
-          self.textbox3.setText(email_id)
+          self.textbox1.setText(email_id)
 
 
     def change_password(self):
-        email_id = self.textbox3.text()
-        val1 = self.textbox4.text()
-        val2 = self.textbox2.text()
+        val1= self.textbox3.text()
+        val2 = self.textbox4.text()
+        val3 = self.textbox2.text()
+        email_id = self.textbox1.text()
         i = 0
         for x in df.itertuples():
             if x[4] == email_id:
                 if val1 == x[6]:
-                    df.loc[i,'Password'] = val2
-                    df.to_csv("sampleDB.csv", index=False)
-                    break   
+                    if val2 == val3:
+                        df.loc[i,'Password'] = val2
+                        df.to_csv("sampleDB.csv", index=False)
+                        break
+                    else:
+                        #password doesn't match 
+                        ctypes.windll.user32.MessageBoxW(0, "Confirm Password and New password is different", "Error", 1)
+                        self.textbox4.setText("")
+                        self.textbox2.setText("")
+                        
+                        break
+                else:
+                    #old password is incorrect
+                    ctypes.windll.user32.MessageBoxW(0, "Old Password is Incorrect", "Error", 1)
+                    self.textbox4.setText("")
+                    self.textbox2.setText("")
+                    self.textbox3.setText("")
+
+                    break
+
             i = i+1       
     def create_widgets(self):
 
@@ -102,7 +121,7 @@ class Window2(QWidget):
         self.btn1.clicked.connect(lambda: self.sending_mail())
         #self.btn1.clicked.connect(lambda: print(self.textbox1.text()))
     
-        self.label4 = QLabel("Email",self)
+        self.label4 = QLabel("Old Password",self)
         self.label4.move(int(w*0.5208),int(h*0.3768))
         self.label4.setFont(QFont("Times New Roman",int(w*h*0.00000819830)))
         self.label4.setStyleSheet("color:white")
