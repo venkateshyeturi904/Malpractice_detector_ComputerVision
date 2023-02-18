@@ -3,6 +3,7 @@ from PyQt5.QtGui import *
 from PyQt5 import *
 from PyQt5.QtCore import Qt
 import StudentRegistrationPage
+
 import sys 
 app = QApplication(sys.argv) 
 screen = app.primaryScreen()
@@ -97,10 +98,12 @@ class Window(QWidget):
         #label8.setStyleSheet("color:white")
 
     def callRPage(self):
+        
         RPage = StudentRegistrationPage.Window2()
         # win = RPage.window2()
-        RPage.show()
+        # RPage.show()
         window.close()
+        RPage.show()
 
 
 

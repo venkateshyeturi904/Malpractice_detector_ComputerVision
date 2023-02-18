@@ -147,7 +147,7 @@ class LinkLabel(QLabel):
         color_effect = QGraphicsColorizeEffect()
         #color_effect.setColor(white)
 
-window = Window2()
-window.setGeometry(0,0,2000,1000)
-window.show()
-sys.exit(app.exec())
+# window = Window2()
+# window.setGeometry(0,0,2000,1000)
+# window.show()
+# sys.exit(app.exec())
