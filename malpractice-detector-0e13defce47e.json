@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "malpractice-detector",
+  "private_key_id": "0e13defce47e811e2e7480bc46382ede53ab9e5b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDFAhvwg0lozMoP\nA0NO+iVkj3g1UYRICyD3ZqkggsAiP1tyOzfRfCza9IVFQqPKqPQLRhHRofEdjNPq\nGBuSHfL91l5HWZ/dBT/oxUtmxqrCqTIpslAM51x1440N21BIDekAp1/nxJOkKZNi\ntoneuzr34y0lJvg6oaAKFVrrA5gO5GOLErhxr136psDPI1TPY2vt7PfbAhCohEKu\nNKy45ZVu4fvYaRwNHYDNVfcIHrUc1ffM8aB/alahxLhNCy+K8XhN5WT9TPALIV84\ny6PGCvlK82YT1gB6++jA43+/u07v7uaD08M2MtmB689VeDtwHjjjjqSyWsk8mgsW\nQQMA1LEVAgMBAAECggEAL36ILM4ByxWf2smvFuGgVSNvV+9MhC/GpU4nFNLgrgD3\nM01KciLND4YmgOGFaiycFQGx9wdjAPw79HIWZ3334DEnbm0RaK/EzgGOYXsgnKg8\nkyfNO6clN7iBf2cxbgWIeCNhsBbIfymUwhX+m+coWq12az//VOc1FWk7j2/A30nM\nuqOjDfrcEf6gdJ3U9dLom8sBjGBC9teFwkhyK7KgFmzaqY0U+04uFFay0hR7Iqcf\nxt33IwItAiGHzNQBh5eIT/gJodySxoDZKJb7yLiNfMUyg6sjlnerIVSH0RcTS9Ii\n1F4QSAOCnFuHwcJCrJRHVUYYqmSw1qBgk1A3qg9cawKBgQDryY0DuxTSBySPAHWt\nK7JGaacBme1RS0zAGmI0LYskzstYjoD4AHzXAzPiTUt5rogVhDUT3kD7AENiTXuz\n4o+C/fVV1bDqxowxSBOGVsfHgnNrIDb40XRUPo9/sp84eC3wPNqyciQlKHAYvpgs\nssCcPbEDPyYWmXp/HJfyw+bcGwKBgQDV5YklWt8d/dncqAmbGpV9MjoxZ8TWMUpk\noRbQ6dYnVpFsUDSxCrzAyhzHrgcmvMeLrdLJtybxgx2jxF+4ASAu/KokNECqZFKO\n2gptsW4lNmb1SnV9QQxYpZ+04A8UHKc6qYFfBnojAqguPoDoAkk87XXFJ1I7cUVk\n0UcVf98ajwKBgEQucRd+FqQxKpIreNvNgey4inF9GFHkq1n1hyY9cToAjm6aLpMI\nWRE3vN4YqdWS8Yj/RPXs0++BAPtBGp9GyWcAltvuQg1xwoJRrEuxdm2rvEJi+2Jx\n9uiRep9bgI0su2P3xOnK9cbE7b1KB+kM+4Nyl2gv74yjbveoxguOOIi3AoGAYWWd\np4bTZgK7e4CAr0HRpCqE2Q5ZUPcs2tmHXCW+QDdpDJsRAzTSci8WH86crwTzECVc\ngEGH2B1OF85Jj63ji8G9b7LjZzM7bJTYfs52SzeUdkkrapd+GbeBG4mTFCNf+pRI\nto5qexqwni4T4JF56+Zs5BNdnHedk6S/64hIfP0CgYEAyIzspeLB2+gf8LP9kf0/\nVfhmyZvf3m+UGG0B6XpdpHipucqCVIEycd3Fp2RWorhvoSAaAiO5/IriMIva8hPo\nFeUnKyZOvju92oAcaIGtwemOIg1OSY2k4abCrA3qR9kn01U+3HjCRXQyNRDbNjmj\njgo+c0rn1oBBBMFWFDdT/yU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "malpractice-detector@malpractice-detector.iam.gserviceaccount.com",
+  "client_id": "108248873960820500433",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/malpractice-detector%40malpractice-detector.iam.gserviceaccount.com"
+}

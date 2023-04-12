@@ -4,6 +4,7 @@ from PyQt5 import *
 from PyQt5.QtCore import Qt
 from email_sender import send_email
 from internet_connectivity import connect_internet
+import db
 
 
 import sys 
@@ -22,7 +23,8 @@ w = user32.GetSystemMetrics(0)
 h = user32.GetSystemMetrics(1)
 print(w,h)
 email_id = ""
-df = pd.read_csv("sampleDB.csv")
+#df = pd.read_csv("sampleDB.csv")
+df = db.data
 
 class Window_loginPage(QWidget):
     def __init__(self):
@@ -61,7 +63,6 @@ class Window_loginPage(QWidget):
          self.cams = Window_StudentRegistrationPage() 
          self.cams.show()
          self.close()
-         print("changed")
 
     def create_widgets(self):
 
@@ -164,9 +165,11 @@ class Window_StudentRegistrationPage(QWidget):
     def sending_mail(self) :
           email_id = self.textbox1.text()
           password = ""
-          for x in df.itertuples():
-            if x[4] == email_id:
-                password = x[6]
+          for i in range(1,len(df)):
+            x = df[i]
+            print(x)
+            if x['Outlook Id'] == email_id:
+                password = x['Password']
                 break    
           send_email(recipient= email_id, email= password )
           ctypes.windll.user32.MessageBoxW(0, "Mail sent on your email-id. Please check spam/junk folder too!", "Action completed", 1)
@@ -178,13 +181,14 @@ class Window_StudentRegistrationPage(QWidget):
         val2 = self.textbox4.text()
         val3 = self.textbox2.text()
         email_id = self.textbox1.text()
-        i = 0
-        for x in df.itertuples():
-            if x[4] == email_id:
-                if val1 == x[6]:
+        for i in range(1,len(df)):
+            x = df[i]
+            if x['Outlook Id'] == email_id:
+                if val1 == x['Password']:
                     if val2 == val3:
-                        df.loc[i,'Password'] = val2
-                        df.to_csv("sampleDB.csv", index=False)
+                        #df.loc[i,'Password'] = val2
+                        #df.to_csv("sampleDB.csv", index=False)
+                        db.sheet.update_cell(x['Candidate Id']+1,6,val2)
                         break
                     else:
                         #password doesn't match 
@@ -202,7 +206,6 @@ class Window_StudentRegistrationPage(QWidget):
 
                     break
 
-            i = i+1       
     def create_widgets(self):
         
 
