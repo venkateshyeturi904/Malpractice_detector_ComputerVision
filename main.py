@@ -1,17 +1,16 @@
+import sys 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import *
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import *
+from PyQt5.QtWebEngineWidgets import *
 from email_sender import send_email
 from internet_connectivity import connect_internet
 import db
 
-
-import sys 
 import pandas as pd
 import ctypes   
 
-import sys 
 app = QApplication(sys.argv) 
 # screen = app.primaryScreen()
 # screen=screen.size()
@@ -30,6 +29,7 @@ class Window_loginPage(QWidget):
     def __init__(self):
         super().__init__()
         
+
         self.setFixedWidth(w)
         self.setFixedHeight(h)
         self.setWindowTitle('IITG')
