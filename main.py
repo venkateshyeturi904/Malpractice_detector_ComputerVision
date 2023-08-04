@@ -3,13 +3,15 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import *
 from PyQt5.QtCore import *
-from PyQt5.QtWebEngineWidgets import *
+#from PyQt5.QtWebEngineWidgets import *
 from email_sender import send_email
 from internet_connectivity import connect_internet
 import db
-
+import gspread
 import pandas as pd
 import ctypes   
+# from cameraPage import Window3
+
 
 app = QApplication(sys.argv) 
 # screen = app.primaryScreen()
@@ -113,7 +115,7 @@ class Window_loginPage(QWidget):
         linkTemplate = '<a href={0}>{1}</a>'
 
         btn3 = QPushButton("New User",self)
-        btn3.setGeometry(int(w*0.75),int(h*0.50925),int(w*0.11979),int(h*0.0416))
+        btn3.setGeometry(int(w*0.65),int(h*0.50925),int(w*0.11979),int(h*0.0416))
         btn3.clicked.connect(lambda: self.change_StudentRegistrationPage())
 
         # label7.setText(linkTemplate.format('https://Google.com','New User'))
@@ -283,8 +285,16 @@ class Window_StudentRegistrationPage(QWidget):
         
         self.btn2 = QPushButton("Proceed to Face registration",self)
         self.btn2.setGeometry(int(w*0.583),int(h*0.64),int(w*0.14979),int(h*0.0416))
-        self.btn2.clicked.connect(lambda: self.change_password())
+        # self.btn2.clicked.connect(self.open_face_registration_page)
 
+    
+    def open_face_registration_page(self):
+        self.close()
+        window3 = Window3()
+        window3.setGeometry(0,30,w,h)
+        window3.show()
+        sys.exit(app.exec())
+        
 
 class LinkLabel(QLabel):
     def __init__(self,parent=None):
@@ -298,3 +308,5 @@ window = Window_loginPage()
 # window.setGeometry(0,0,2000,1000)
 window.show()
 sys.exit(app.exec())
+
+

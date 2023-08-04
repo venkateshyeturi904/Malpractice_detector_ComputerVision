@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="backgroundimage">
+    <file>background_mtp_design.jpg</file>
+  </qresource>
+</RCC>
